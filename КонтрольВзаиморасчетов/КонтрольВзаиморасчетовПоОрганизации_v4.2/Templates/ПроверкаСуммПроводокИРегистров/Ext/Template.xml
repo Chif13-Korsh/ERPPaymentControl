@@ -1,0 +1,1993 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">37</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегСуммаПредоплата</dataPath>
+			<field>РегСуммаПредоплата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регл. сумма (предоплата)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегСумма</dataPath>
+			<field>РегСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регл. сумма</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегСуммаДолг</dataPath>
+			<field>РегСуммаДолг</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регл. сумма (долг)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предоплата</dataPath>
+			<field>Предоплата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предоплата (в указанной валюте)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредоплатаРегл</dataPath>
+			<field>ПредоплатаРегл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предоплата (регл)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Долг</dataPath>
+			<field>Долг</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долг (в указанной валюте)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолгРегл</dataPath>
+			<field>ДолгРегл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долг (регл)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидВзаиморасчетов</dataPath>
+			<field>ВидВзаиморасчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид взаиморасчетов</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<availableValue>
+				<value xsi:type="xs:string">Клиенты</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Клиенты</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Поставщики</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поставщики</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютнаяСуммаПредоплата</dataPath>
+			<field>ВалютнаяСуммаПредоплата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вал.сумма (предоплата)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютнаяСуммаДолг</dataPath>
+			<field>ВалютнаяСуммаДолг</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вал.сумма (долг)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолгРасчет</dataPath>
+			<field>ДолгРасчет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долг-расчет (в указанной валюте)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредоплатаРасчет</dataPath>
+			<field>ПредоплатаРасчет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предоплата-расчет (в указанной валюте)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КОплатеРасчет</dataPath>
+			<field>КОплатеРасчет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К оплате расчет (в указанной валюте)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧГ=3,0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорядокРасчетов</dataPath>
+			<field>ПорядокРасчетов</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">31</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорВал</dataPath>
+			<field>ДоговорВал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вал.</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">#005E00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=' '; БИ=Вал.</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорУЕ</dataPath>
+			<field>ДоговорУЕ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>у.е.</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">#005E00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=' '; БИ=у.е.</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГФУДоговора</dataPath>
+			<field>ГФУДоговора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ГФУ договора</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">45</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>ПоКлиентам</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Контрагент</dataPath>
+				<field>Контрагент</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Контрагент</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Организация</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Договор</dataPath>
+				<field>Договор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Договор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Валюта</dataPath>
+				<field>Валюта</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РегСуммаПредоплата</dataPath>
+				<field>РегСуммаПредоплата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Рег сумма предоплата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РегСумма</dataPath>
+				<field>РегСумма</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Рег сумма</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РегСуммаДолг</dataPath>
+				<field>РегСуммаДолг</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Рег сумма долг</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Предоплата</dataPath>
+				<field>Предоплата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Предоплата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПредоплатаРегл</dataPath>
+				<field>ПредоплатаРегл</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Предоплата регл</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Долг</dataPath>
+				<field>Долг</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Долг</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДолгРегл</dataPath>
+				<field>ДолгРегл</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Долг регл</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидВзаиморасчетов</dataPath>
+				<field>ВидВзаиморасчетов</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид взаиморасчетов</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВалютнаяСуммаПредоплата</dataPath>
+				<field>ВалютнаяСуммаПредоплата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Валютная сумма предоплата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВалютнаяСуммаДолг</dataPath>
+				<field>ВалютнаяСуммаДолг</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Валютная сумма долг</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДолгРасчет</dataPath>
+				<field>ДолгРасчет</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Долг расчет</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПредоплатаРасчет</dataPath>
+				<field>ПредоплатаРасчет</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Предоплата расчет</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КОплатеРасчет</dataPath>
+				<field>КОплатеРасчет</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>К оплате расчет</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПорядокРасчетов</dataPath>
+				<field>ПорядокРасчетов</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоговорВал</dataPath>
+				<field>ДоговорВал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Договор вал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоговорУЕ</dataPath>
+				<field>ДоговорУЕ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Договор УЕ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГФУДоговора</dataPath>
+				<field>ГФУДоговора</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ГФУДоговора</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ХозрасчетныйОстатки.Организация КАК Организация,
+	ХозрасчетныйОстатки.Субконто1 КАК Контрагент,
+	ВЫБОР
+		КОГДА ХозрасчетныйОстатки.Субконто2 = НЕОПРЕДЕЛЕНО
+			ТОГДА ЗНАЧЕНИЕ(Справочник.ДоговорыКонтрагентов.ПустаяСсылка)
+		ИНАЧЕ ХозрасчетныйОстатки.Субконто2
+	КОНЕЦ КАК Договор,
+	ВЫРАЗИТЬ(ХозрасчетныйОстатки.Субконто2 КАК Справочник.ДоговорыКонтрагентов).ГруппаФинансовогоУчета КАК ГФУДоговора,
+	ЕСТЬNULL(ХозрасчетныйОстатки.Валюта, &amp;РеглВалюта) КАК Валюта,
+	ХозрасчетныйОстатки.СуммаОстаток КАК РегСумма,
+	ХозрасчетныйОстатки.ВалютнаяСуммаОстаток КАК ВалютнаяСумма
+ПОМЕСТИТЬ РегУчет
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(
+			&amp;Период,
+			Счет В (&amp;СчетаВзаиморасчетовКлиенты),
+			&amp;СубконтоВзаиморасчетов,
+			Организация = &amp;Организация
+				{(Субконто1).* КАК Контрагент, (Субконто2).* КАК Договор, (ЕСТЬNULL(Валюта, &amp;РеглВалюта)).* КАК Валюта}) КАК ХозрасчетныйОстатки
+{ГДЕ
+	("Клиенты") КАК ВидВзаиморасчетов}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ХозрасчетныйОстатки.Организация,
+	ХозрасчетныйОстатки.Субконто1,
+	ВЫБОР
+		КОГДА ХозрасчетныйОстатки.Субконто2 = НЕОПРЕДЕЛЕНО
+			ТОГДА ЗНАЧЕНИЕ(Справочник.ДоговорыКонтрагентов.ПустаяСсылка)
+		ИНАЧЕ ХозрасчетныйОстатки.Субконто2
+	КОНЕЦ,
+	ВЫРАЗИТЬ(ХозрасчетныйОстатки.Субконто2 КАК Справочник.ДоговорыКонтрагентов).ГруппаФинансовогоУчета,
+	ЕСТЬNULL(ХозрасчетныйОстатки.Валюта, &amp;РеглВалюта),
+	ХозрасчетныйОстатки.СуммаОстаток,
+	ХозрасчетныйОстатки.ВалютнаяСуммаОстаток
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(
+			&amp;Период,
+			Счет В (&amp;СчетаВзаиморасчетыОбщие),
+			&amp;СубконтоВзаиморасчетов,
+			Организация = &amp;Организация
+				И ВЫРАЗИТЬ(Субконто2 КАК Справочник.ДоговорыКонтрагентов).ТипДоговора = ЗНАЧЕНИЕ(Перечисление.ТипыДоговоров.СПокупателем)
+				{(Субконто1).* КАК Контрагент, (Субконто2).* КАК Договор, (ЕСТЬNULL(Валюта, &amp;РеглВалюта)).* КАК Валюта}) КАК ХозрасчетныйОстатки
+{ГДЕ
+	("Клиенты") КАК ВидВзаиморасчетов}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РасчетыПоСрокам.АналитикаУчетаПоПартнерам.Организация КАК Организация,
+	РасчетыПоСрокам.АналитикаУчетаПоПартнерам.Контрагент КАК Контрагент,
+	РасчетыПоСрокам.АналитикаУчетаПоПартнерам.Договор КАК Договор,
+	ВЫРАЗИТЬ(РасчетыПоСрокам.АналитикаУчетаПоПартнерам.Договор КАК Справочник.ДоговорыКонтрагентов).ГруппаФинансовогоУчета КАК ГФУДоговора,
+	РасчетыПоСрокам.Валюта КАК Валюта,
+	РасчетыПоСрокам.ПредоплатаОстаток КАК Предоплата,
+	РасчетыПоСрокам.ПредоплатаРеглОстаток КАК ПредоплатаРегл,
+	РасчетыПоСрокам.ДолгОстаток КАК Долг,
+	РасчетыПоСрокам.ДолгРеглОстаток КАК ДолгРегл
+ПОМЕСТИТЬ РасчетыПоСрокам
+ИЗ
+	РегистрНакопления.РасчетыСКлиентамиПоСрокам.Остатки(
+			&amp;Период,
+			АналитикаУчетаПоПартнерам.Организация = &amp;Организация
+				{(АналитикаУчетаПоПартнерам.Контрагент).* КАК Контрагент, (АналитикаУчетаПоПартнерам.Договор).* КАК Договор, (Валюта).*}) КАК РасчетыПоСрокам
+{ГДЕ
+	("Клиенты") КАК ВидВзаиморасчетов}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Расчеты.АналитикаУчетаПоПартнерам.Организация КАК Организация,
+	Расчеты.АналитикаУчетаПоПартнерам.Контрагент КАК Контрагент,
+	Расчеты.АналитикаУчетаПоПартнерам.Договор КАК Договор,
+	ВЫРАЗИТЬ(Расчеты.АналитикаУчетаПоПартнерам.Договор КАК Справочник.ДоговорыКонтрагентов).ГруппаФинансовогоУчета КАК ГФУДоговора,
+	Расчеты.Валюта КАК Валюта,
+	Расчеты.СуммаОстаток КАК Сумма,
+	Расчеты.КОплатеОстаток КАК КОплате
+ПОМЕСТИТЬ Расчеты
+ИЗ
+	РегистрНакопления.РасчетыСКлиентами.Остатки(
+			&amp;Период,
+			АналитикаУчетаПоПартнерам.Организация = &amp;Организация
+				{(АналитикаУчетаПоПартнерам.Контрагент).* КАК Контрагент, (АналитикаУчетаПоПартнерам.Договор).* КАК Договор, (Валюта).*}) КАК Расчеты
+{ГДЕ
+	("Клиенты") КАК ВидВзаиморасчетов}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Общий.Организация КАК Организация,
+	Общий.Контрагент КАК Контрагент,
+	Общий.Договор КАК Договор,
+	Общий.ГФУДоговора КАК ГФУДоговора,
+	ДоговорыКонтрагентов.ПорядокРасчетов КАК ПорядокРасчетов,
+	ДоговорыКонтрагентов.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+		И ДоговорыКонтрагентов.ОплатаВВалюте КАК ДоговорВал,
+	ДоговорыКонтрагентов.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+		И НЕ ДоговорыКонтрагентов.ОплатаВВалюте КАК ДоговорУЕ,
+	Общий.Валюта КАК Валюта,
+	СУММА(Общий.РегСумма) КАК РегСумма,
+	СУММА(Общий.РегСуммаПредоплата) КАК РегСуммаПредоплата,
+	СУММА(Общий.РегСуммаДолг) КАК РегСуммаДолг,
+	СУММА(Общий.ВалютнаяСуммаПредоплата) КАК ВалютнаяСуммаПредоплата,
+	СУММА(Общий.ВалютнаяСуммаДолг) КАК ВалютнаяСуммаДолг,
+	СУММА(Общий.Предоплата) КАК Предоплата,
+	СУММА(Общий.ПредоплатаРегл) КАК ПредоплатаРегл,
+	СУММА(Общий.Долг) КАК Долг,
+	СУММА(Общий.ДолгРегл) КАК ДолгРегл,
+	СУММА(Общий.Долг) - СУММА(Общий.Предоплата) КАК СуммаПоСрокам,
+	СУММА(Общий.ДолгРегл) - СУММА(Общий.ПредоплатаРегл) КАК СуммаРеглПоСрокам,
+	СУММА(Общий.ПредоплатаРасчет) КАК ПредоплатаРасчет,
+	СУММА(Общий.ДолгРасчет) КАК ДолгРасчет,
+	СУММА(Общий.СуммаРасчет) КАК СуммаРасчет,
+	СУММА(Общий.КОплатеРасчет) КАК КОплатеРасчет
+ПОМЕСТИТЬ ОбщийПоВзаиморасчетам
+ИЗ
+	(ВЫБРАТЬ
+		РегУчет.Организация КАК Организация,
+		РегУчет.Контрагент КАК Контрагент,
+		РегУчет.Договор КАК Договор,
+		РегУчет.ГФУДоговора КАК ГФУДоговора,
+		РегУчет.Валюта КАК Валюта,
+		РегУчет.РегСумма КАК РегСумма,
+		ВЫБОР
+			КОГДА РегУчет.РегСумма &lt; 0
+				ТОГДА -РегУчет.РегСумма
+			ИНАЧЕ 0
+		КОНЕЦ КАК РегСуммаПредоплата,
+		ВЫБОР
+			КОГДА РегУчет.РегСумма &gt; 0
+				ТОГДА РегУчет.РегСумма
+			ИНАЧЕ 0
+		КОНЕЦ КАК РегСуммаДолг,
+		ВЫБОР
+			КОГДА РегУчет.ВалютнаяСумма &lt; 0
+				ТОГДА -РегУчет.ВалютнаяСумма
+			ИНАЧЕ 0
+		КОНЕЦ КАК ВалютнаяСуммаПредоплата,
+		ВЫБОР
+			КОГДА РегУчет.ВалютнаяСумма &gt; 0
+				ТОГДА РегУчет.ВалютнаяСумма
+			ИНАЧЕ 0
+		КОНЕЦ КАК ВалютнаяСуммаДолг,
+		0 КАК Предоплата,
+		0 КАК ПредоплатаРегл,
+		0 КАК Долг,
+		0 КАК ДолгРегл,
+		0 КАК ПредоплатаРасчет,
+		0 КАК ДолгРасчет,
+		0 КАК КОплатеРасчет,
+		0 КАК СуммаРасчет
+	ИЗ
+		РегУчет КАК РегУчет
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		РасчетыПоСрокам.Организация,
+		РасчетыПоСрокам.Контрагент,
+		РасчетыПоСрокам.Договор,
+		РасчетыПоСрокам.ГФУДоговора,
+		РасчетыПоСрокам.Валюта,
+		0,
+		0,
+		0,
+		0,
+		0,
+		РасчетыПоСрокам.Предоплата,
+		РасчетыПоСрокам.ПредоплатаРегл,
+		РасчетыПоСрокам.Долг,
+		РасчетыПоСрокам.ДолгРегл,
+		0,
+		0,
+		0,
+		0
+	ИЗ
+		РасчетыПоСрокам КАК РасчетыПоСрокам
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Расчеты.Организация,
+		Расчеты.Контрагент,
+		Расчеты.Договор,
+		Расчеты.ГФУДоговора,
+		Расчеты.Валюта,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА Расчеты.Сумма &lt; 0
+				ТОГДА -Расчеты.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		ВЫБОР
+			КОГДА Расчеты.Сумма &gt; 0
+				ТОГДА Расчеты.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		Расчеты.КОплате,
+		Расчеты.Сумма
+	ИЗ
+		Расчеты КАК Расчеты) КАК Общий
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+		ПО Общий.Договор = ДоговорыКонтрагентов.Ссылка
+{ГДЕ
+	ДоговорыКонтрагентов.ПорядокРасчетов}
+
+СГРУППИРОВАТЬ ПО
+	Общий.Организация,
+	Общий.Контрагент,
+	Общий.Договор,
+	Общий.Валюта,
+	ДоговорыКонтрагентов.ПорядокРасчетов,
+	ДоговорыКонтрагентов.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+		И НЕ ДоговорыКонтрагентов.ОплатаВВалюте,
+	ДоговорыКонтрагентов.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+		И ДоговорыКонтрагентов.ОплатаВВалюте,
+	Общий.ГФУДоговора
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ РегУчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ РасчетыПоСрокам
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ Расчеты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	"Клиенты" КАК ВидВзаиморасчетов,
+	ОбщийПоВзаиморасчетам.Организация КАК Организация,
+	ОбщийПоВзаиморасчетам.Контрагент КАК Контрагент,
+	ОбщийПоВзаиморасчетам.Договор КАК Договор,
+	ОбщийПоВзаиморасчетам.ГФУДоговора КАК ГФУДоговора,
+	ОбщийПоВзаиморасчетам.ПорядокРасчетов КАК ПорядокРасчетов,
+	ОбщийПоВзаиморасчетам.ДоговорВал КАК ДоговорВал,
+	ОбщийПоВзаиморасчетам.ДоговорУЕ КАК ДоговорУЕ,
+	ОбщийПоВзаиморасчетам.Валюта КАК Валюта,
+	ОбщийПоВзаиморасчетам.РегСумма КАК РегСумма,
+	ОбщийПоВзаиморасчетам.РегСуммаПредоплата КАК РегСуммаПредоплата,
+	ОбщийПоВзаиморасчетам.РегСуммаДолг КАК РегСуммаДолг,
+	ОбщийПоВзаиморасчетам.ВалютнаяСуммаПредоплата КАК ВалютнаяСуммаПредоплата,
+	ОбщийПоВзаиморасчетам.ВалютнаяСуммаДолг КАК ВалютнаяСуммаДолг,
+	ОбщийПоВзаиморасчетам.Предоплата КАК Предоплата,
+	ОбщийПоВзаиморасчетам.ПредоплатаРегл КАК ПредоплатаРегл,
+	ОбщийПоВзаиморасчетам.Долг КАК Долг,
+	ОбщийПоВзаиморасчетам.ДолгРегл КАК ДолгРегл,
+	ОбщийПоВзаиморасчетам.СуммаПоСрокам КАК СуммаПоСрокам,
+	ОбщийПоВзаиморасчетам.СуммаРеглПоСрокам КАК СуммаРеглПоСрокам,
+	ОбщийПоВзаиморасчетам.ПредоплатаРасчет КАК ПредоплатаРасчет,
+	ОбщийПоВзаиморасчетам.ДолгРасчет КАК ДолгРасчет,
+	ОбщийПоВзаиморасчетам.СуммаРасчет КАК СуммаРасчет,
+	ОбщийПоВзаиморасчетам.КОплатеРасчет КАК КОплатеРасчет
+{ВЫБРАТЬ
+	Организация.*,
+	Контрагент.*,
+	Договор.*,
+	ГФУДоговора,
+	ПорядокРасчетов,
+	Валюта.*,
+	РегСумма,
+	РегСуммаПредоплата,
+	РегСуммаДолг,
+	ВалютнаяСуммаПредоплата,
+	ВалютнаяСуммаДолг,
+	Предоплата,
+	ПредоплатаРегл,
+	Долг,
+	ДолгРегл,
+	ВидВзаиморасчетов,
+	ПредоплатаРасчет,
+	ДолгРасчет,
+	КОплатеРасчет,
+	ДоговорВал,
+	ДоговорУЕ}
+ИЗ
+	ОбщийПоВзаиморасчетам КАК ОбщийПоВзаиморасчетам
+ГДЕ
+	НЕ ВЫБОР
+				КОГДА ОбщийПоВзаиморасчетам.Валюта = &amp;РеглВалюта
+					ТОГДА ВЫБОР
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма &gt; 0
+								ТОГДА ОбщийПоВзаиморасчетам.РегСуммаДолг = ОбщийПоВзаиморасчетам.ДолгРегл
+										И ОбщийПоВзаиморасчетам.РегСуммаДолг = ОбщийПоВзаиморасчетам.ДолгРасчет
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма &lt; 0
+								ТОГДА ОбщийПоВзаиморасчетам.РегСуммаПредоплата = ОбщийПоВзаиморасчетам.ПредоплатаРегл
+										И ОбщийПоВзаиморасчетам.РегСуммаПредоплата = ОбщийПоВзаиморасчетам.ПредоплатаРасчет
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма = 0
+								ТОГДА ОбщийПоВзаиморасчетам.СуммаРеглПоСрокам = 0
+										И ОбщийПоВзаиморасчетам.СуммаРасчет = 0
+						КОНЕЦ
+				КОГДА ОбщийПоВзаиморасчетам.Валюта &lt;&gt; &amp;РеглВалюта
+					ТОГДА ВЫБОР
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма &gt; 0
+								ТОГДА ОбщийПоВзаиморасчетам.РегСуммаДолг - ОбщийПоВзаиморасчетам.ДолгРегл МЕЖДУ -0.03 И 0.03
+										И ОбщийПоВзаиморасчетам.ВалютнаяСуммаДолг = ОбщийПоВзаиморасчетам.Долг
+										И ОбщийПоВзаиморасчетам.ВалютнаяСуммаДолг = ОбщийПоВзаиморасчетам.ДолгРасчет
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма &lt; 0
+								ТОГДА ОбщийПоВзаиморасчетам.РегСуммаПредоплата - ОбщийПоВзаиморасчетам.ПредоплатаРегл МЕЖДУ -0.03 И 0.03
+										И ОбщийПоВзаиморасчетам.ВалютнаяСуммаПредоплата = ОбщийПоВзаиморасчетам.Предоплата
+										И ОбщийПоВзаиморасчетам.ВалютнаяСуммаПредоплата = ОбщийПоВзаиморасчетам.ПредоплатаРасчет
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма = 0
+								ТОГДА ОбщийПоВзаиморасчетам.СуммаРеглПоСрокам МЕЖДУ -0.03 И 0.03
+										И ОбщийПоВзаиморасчетам.СуммаРасчет = 0
+						КОНЕЦ
+			КОНЕЦ</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ПоПоставщикам</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Контрагент</dataPath>
+				<field>Контрагент</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Контрагент</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Организация</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Договор</dataPath>
+				<field>Договор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Договор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Валюта</dataPath>
+				<field>Валюта</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РегСуммаПредоплата</dataPath>
+				<field>РегСуммаПредоплата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Рег сумма предоплата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РегСумма</dataPath>
+				<field>РегСумма</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Рег сумма</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РегСуммаДолг</dataPath>
+				<field>РегСуммаДолг</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Рег сумма долг</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Предоплата</dataPath>
+				<field>Предоплата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Предоплата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПредоплатаРегл</dataPath>
+				<field>ПредоплатаРегл</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Предоплата регл</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Долг</dataPath>
+				<field>Долг</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Долг</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДолгРегл</dataPath>
+				<field>ДолгРегл</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Долг регл</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидВзаиморасчетов</dataPath>
+				<field>ВидВзаиморасчетов</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид взаиморасчетов</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВалютнаяСуммаПредоплата</dataPath>
+				<field>ВалютнаяСуммаПредоплата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Валютная сумма предоплата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВалютнаяСуммаДолг</dataPath>
+				<field>ВалютнаяСуммаДолг</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Валютная сумма долг</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДолгРасчет</dataPath>
+				<field>ДолгРасчет</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Долг расчет</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПредоплатаРасчет</dataPath>
+				<field>ПредоплатаРасчет</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Предоплата расчет</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КОплатеРасчет</dataPath>
+				<field>КОплатеРасчет</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>К оплате расчет</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПорядокРасчетов</dataPath>
+				<field>ПорядокРасчетов</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоговорВал</dataPath>
+				<field>ДоговорВал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Договор вал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоговорУЕ</dataPath>
+				<field>ДоговорУЕ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Договор УЕ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГФУДоговора</dataPath>
+				<field>ГФУДоговора</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ГФУДоговора</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ХозрасчетныйОстатки.Организация КАК Организация,
+	ХозрасчетныйОстатки.Субконто1 КАК Контрагент,
+	ВЫБОР
+		КОГДА ХозрасчетныйОстатки.Субконто2 = НЕОПРЕДЕЛЕНО
+			ТОГДА ЗНАЧЕНИЕ(Справочник.ДоговорыКонтрагентов.ПустаяСсылка)
+		ИНАЧЕ ХозрасчетныйОстатки.Субконто2
+	КОНЕЦ КАК Договор,
+	ВЫРАЗИТЬ(ХозрасчетныйОстатки.Субконто2 КАК Справочник.ДоговорыКонтрагентов).ГруппаФинансовогоУчета КАК ГФУДоговора,
+	ЕСТЬNULL(ХозрасчетныйОстатки.Валюта, &amp;РеглВалюта) КАК Валюта,
+	ХозрасчетныйОстатки.СуммаОстаток КАК РегСумма,
+	ХозрасчетныйОстатки.ВалютнаяСуммаОстаток КАК ВалютнаяСумма
+ПОМЕСТИТЬ РегУчет
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(
+			&amp;Период,
+			Счет В (&amp;СчетаВзаиморасчетовПоставщики),
+			&amp;СубконтоВзаиморасчетов,
+			Организация = &amp;Организация
+				{(Субконто1).* КАК Контрагент, (Субконто2).* КАК Договор, (ЕСТЬNULL(Валюта, &amp;РеглВалюта)).* КАК Валюта}) КАК ХозрасчетныйОстатки
+{ГДЕ
+	("Поставщики") КАК ВидВзаиморасчетов}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ХозрасчетныйОстатки.Организация,
+	ХозрасчетныйОстатки.Субконто1,
+	ВЫБОР
+		КОГДА ХозрасчетныйОстатки.Субконто2 = НЕОПРЕДЕЛЕНО
+			ТОГДА ЗНАЧЕНИЕ(Справочник.ДоговорыКонтрагентов.ПустаяСсылка)
+		ИНАЧЕ ХозрасчетныйОстатки.Субконто2
+	КОНЕЦ,
+	ВЫРАЗИТЬ(ХозрасчетныйОстатки.Субконто2 КАК Справочник.ДоговорыКонтрагентов).ГруппаФинансовогоУчета,
+	ЕСТЬNULL(ХозрасчетныйОстатки.Валюта, &amp;РеглВалюта),
+	ХозрасчетныйОстатки.СуммаОстаток,
+	ХозрасчетныйОстатки.ВалютнаяСуммаОстаток
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(
+			&amp;Период,
+			Счет В (&amp;СчетаВзаиморасчетыОбщие),
+			&amp;СубконтоВзаиморасчетов,
+			Организация = &amp;Организация
+				И ВЫРАЗИТЬ(Субконто2 КАК Справочник.ДоговорыКонтрагентов).ТипДоговора = ЗНАЧЕНИЕ(Перечисление.ТипыДоговоров.СПоставщиком)
+				{(Субконто1).* КАК Контрагент, (Субконто2).* КАК Договор, (ЕСТЬNULL(Валюта, &amp;РеглВалюта)).* КАК Валюта}) КАК ХозрасчетныйОстатки
+{ГДЕ
+	("Поставщики") КАК ВидВзаиморасчетов}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РасчетыПоСрокам.АналитикаУчетаПоПартнерам.Организация КАК Организация,
+	РасчетыПоСрокам.АналитикаУчетаПоПартнерам.Контрагент КАК Контрагент,
+	РасчетыПоСрокам.АналитикаУчетаПоПартнерам.Договор КАК Договор,
+	ВЫРАЗИТЬ(РасчетыПоСрокам.АналитикаУчетаПоПартнерам.Договор КАК Справочник.ДоговорыКонтрагентов).ГруппаФинансовогоУчета КАК ГФУДоговора,
+	РасчетыПоСрокам.Валюта КАК Валюта,
+	РасчетыПоСрокам.ПредоплатаОстаток КАК Предоплата,
+	РасчетыПоСрокам.ПредоплатаРеглОстаток КАК ПредоплатаРегл,
+	РасчетыПоСрокам.ДолгОстаток КАК Долг,
+	РасчетыПоСрокам.ДолгРеглОстаток КАК ДолгРегл
+ПОМЕСТИТЬ РасчетыПоСрокам
+ИЗ
+	РегистрНакопления.РасчетыСПоставщикамиПоСрокам.Остатки(
+			&amp;Период,
+			АналитикаУчетаПоПартнерам.Организация = &amp;Организация
+				{(АналитикаУчетаПоПартнерам.Контрагент).* КАК Контрагент, (АналитикаУчетаПоПартнерам.Договор).* КАК Договор, (Валюта).*}) КАК РасчетыПоСрокам
+{ГДЕ
+	("Поставщики") КАК ВидВзаиморасчетов}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Расчеты.АналитикаУчетаПоПартнерам.Организация КАК Организация,
+	Расчеты.АналитикаУчетаПоПартнерам.Контрагент КАК Контрагент,
+	Расчеты.АналитикаУчетаПоПартнерам.Договор КАК Договор,
+	ВЫРАЗИТЬ(Расчеты.АналитикаУчетаПоПартнерам.Договор КАК Справочник.ДоговорыКонтрагентов).ГруппаФинансовогоУчета КАК ГФУДоговора,
+	Расчеты.Валюта КАК Валюта,
+	Расчеты.СуммаОстаток КАК Сумма,
+	Расчеты.КОплатеОстаток КАК КОплате
+ПОМЕСТИТЬ Расчеты
+ИЗ
+	РегистрНакопления.РасчетыСПоставщиками.Остатки(
+			&amp;Период,
+			АналитикаУчетаПоПартнерам.Организация = &amp;Организация
+				{(АналитикаУчетаПоПартнерам.Контрагент).* КАК Контрагент, (АналитикаУчетаПоПартнерам.Договор).* КАК Договор, (Валюта).*}) КАК Расчеты
+{ГДЕ
+	("Поставщики") КАК ВидВзаиморасчетов}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Общий.Организация КАК Организация,
+	Общий.Контрагент КАК Контрагент,
+	Общий.Договор КАК Договор,
+	Общий.ГФУДоговора КАК ГФУДоговора,
+	ДоговорыКонтрагентов.ПорядокРасчетов КАК ПорядокРасчетов,
+	ДоговорыКонтрагентов.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+		И ДоговорыКонтрагентов.ОплатаВВалюте КАК ДоговорВал,
+	ДоговорыКонтрагентов.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+		И НЕ ДоговорыКонтрагентов.ОплатаВВалюте КАК ДоговорУЕ,
+	Общий.Валюта КАК Валюта,
+	СУММА(Общий.РегСумма) КАК РегСумма,
+	СУММА(Общий.РегСуммаПредоплата) КАК РегСуммаПредоплата,
+	СУММА(Общий.РегСуммаДолг) КАК РегСуммаДолг,
+	СУММА(Общий.ВалютнаяСуммаПредоплата) КАК ВалютнаяСуммаПредоплата,
+	СУММА(Общий.ВалютнаяСуммаДолг) КАК ВалютнаяСуммаДолг,
+	СУММА(Общий.Предоплата) КАК Предоплата,
+	СУММА(Общий.ПредоплатаРегл) КАК ПредоплатаРегл,
+	СУММА(Общий.Долг) КАК Долг,
+	СУММА(Общий.ДолгРегл) КАК ДолгРегл,
+	СУММА(Общий.Долг) - СУММА(Общий.Предоплата) КАК СуммаПоСрокам,
+	СУММА(Общий.ДолгРегл) - СУММА(Общий.ПредоплатаРегл) КАК СуммаРеглПоСрокам,
+	СУММА(Общий.ПредоплатаРасчет) КАК ПредоплатаРасчет,
+	СУММА(Общий.ДолгРасчет) КАК ДолгРасчет,
+	СУММА(Общий.СуммаРасчета) КАК СуммаРасчета,
+	СУММА(Общий.КОплатеРасчет) КАК КОплатеРасчет
+ПОМЕСТИТЬ ОбщийПоВзаиморасчетам
+ИЗ
+	(ВЫБРАТЬ
+		РегУчет.Организация КАК Организация,
+		РегУчет.Контрагент КАК Контрагент,
+		РегУчет.Договор КАК Договор,
+		РегУчет.ГФУДоговора КАК ГФУДоговора,
+		РегУчет.Валюта КАК Валюта,
+		РегУчет.РегСумма КАК РегСумма,
+		ВЫБОР
+			КОГДА РегУчет.РегСумма &gt; 0
+				ТОГДА РегУчет.РегСумма
+			ИНАЧЕ 0
+		КОНЕЦ КАК РегСуммаПредоплата,
+		ВЫБОР
+			КОГДА РегУчет.РегСумма &lt; 0
+				ТОГДА -РегУчет.РегСумма
+			ИНАЧЕ 0
+		КОНЕЦ КАК РегСуммаДолг,
+		ВЫБОР
+			КОГДА РегУчет.ВалютнаяСумма &gt; 0
+				ТОГДА РегУчет.ВалютнаяСумма
+			ИНАЧЕ 0
+		КОНЕЦ КАК ВалютнаяСуммаПредоплата,
+		ВЫБОР
+			КОГДА РегУчет.ВалютнаяСумма &lt; 0
+				ТОГДА -РегУчет.ВалютнаяСумма
+			ИНАЧЕ 0
+		КОНЕЦ КАК ВалютнаяСуммаДолг,
+		0 КАК Предоплата,
+		0 КАК ПредоплатаРегл,
+		0 КАК Долг,
+		0 КАК ДолгРегл,
+		0 КАК ПредоплатаРасчет,
+		0 КАК ДолгРасчет,
+		0 КАК КОплатеРасчет,
+		0 КАК СуммаРасчета
+	ИЗ
+		РегУчет КАК РегУчет
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		РасчетыПоСрокам.Организация,
+		РасчетыПоСрокам.Контрагент,
+		РасчетыПоСрокам.Договор,
+		РасчетыПоСрокам.ГФУДоговора,
+		РасчетыПоСрокам.Валюта,
+		0,
+		0,
+		0,
+		0,
+		0,
+		РасчетыПоСрокам.Предоплата,
+		РасчетыПоСрокам.ПредоплатаРегл,
+		РасчетыПоСрокам.Долг,
+		РасчетыПоСрокам.ДолгРегл,
+		0,
+		0,
+		0,
+		0
+	ИЗ
+		РасчетыПоСрокам КАК РасчетыПоСрокам
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Расчеты.Организация,
+		Расчеты.Контрагент,
+		Расчеты.Договор,
+		Расчеты.ГФУДоговора,
+		Расчеты.Валюта,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА Расчеты.Сумма &gt; 0
+				ТОГДА Расчеты.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		ВЫБОР
+			КОГДА Расчеты.Сумма &lt; 0
+				ТОГДА -Расчеты.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		Расчеты.КОплате,
+		Расчеты.Сумма
+	ИЗ
+		Расчеты КАК Расчеты) КАК Общий
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+		ПО Общий.Договор = ДоговорыКонтрагентов.Ссылка
+{ГДЕ
+	ДоговорыКонтрагентов.ПорядокРасчетов}
+
+СГРУППИРОВАТЬ ПО
+	Общий.Организация,
+	Общий.Контрагент,
+	Общий.Договор,
+	Общий.Валюта,
+	ДоговорыКонтрагентов.ПорядокРасчетов,
+	ДоговорыКонтрагентов.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+		И НЕ ДоговорыКонтрагентов.ОплатаВВалюте,
+	ДоговорыКонтрагентов.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+		И ДоговорыКонтрагентов.ОплатаВВалюте,
+	Общий.ГФУДоговора
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ РегУчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ РасчетыПоСрокам
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ Расчеты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	"Поставщики" КАК ВидВзаиморасчетов,
+	ОбщийПоВзаиморасчетам.Организация КАК Организация,
+	ОбщийПоВзаиморасчетам.Контрагент КАК Контрагент,
+	ОбщийПоВзаиморасчетам.Договор КАК Договор,
+	ОбщийПоВзаиморасчетам.ГФУДоговора КАК ГФУДоговора,
+	ОбщийПоВзаиморасчетам.ДоговорВал КАК ДоговорВал,
+	ОбщийПоВзаиморасчетам.ДоговорУЕ КАК ДоговорУЕ,
+	ОбщийПоВзаиморасчетам.ПорядокРасчетов КАК ПорядокРасчетов,
+	ОбщийПоВзаиморасчетам.Валюта КАК Валюта,
+	ОбщийПоВзаиморасчетам.РегСумма КАК РегСумма,
+	ОбщийПоВзаиморасчетам.РегСуммаПредоплата КАК РегСуммаПредоплата,
+	ОбщийПоВзаиморасчетам.РегСуммаДолг КАК РегСуммаДолг,
+	ОбщийПоВзаиморасчетам.ВалютнаяСуммаПредоплата КАК ВалютнаяСуммаПредоплата,
+	ОбщийПоВзаиморасчетам.ВалютнаяСуммаДолг КАК ВалютнаяСуммаДолг,
+	ОбщийПоВзаиморасчетам.Предоплата КАК Предоплата,
+	ОбщийПоВзаиморасчетам.ПредоплатаРегл КАК ПредоплатаРегл,
+	ОбщийПоВзаиморасчетам.Долг КАК Долг,
+	ОбщийПоВзаиморасчетам.ДолгРегл КАК ДолгРегл,
+	ОбщийПоВзаиморасчетам.СуммаПоСрокам КАК СуммаПоСрокам,
+	ОбщийПоВзаиморасчетам.СуммаРеглПоСрокам КАК СуммаРеглПоСрокам,
+	ОбщийПоВзаиморасчетам.ПредоплатаРасчет КАК ПредоплатаРасчет,
+	ОбщийПоВзаиморасчетам.ДолгРасчет КАК ДолгРасчет,
+	ОбщийПоВзаиморасчетам.СуммаРасчета КАК СуммаРасчета,
+	ОбщийПоВзаиморасчетам.КОплатеРасчет КАК КОплатеРасчет
+{ВЫБРАТЬ
+	Организация.*,
+	Контрагент.*,
+	Договор.*,
+	ГФУДоговора,
+	ПорядокРасчетов,
+	Валюта.*,
+	РегСумма,
+	РегСуммаПредоплата,
+	РегСуммаДолг,
+	ВалютнаяСуммаПредоплата,
+	ВалютнаяСуммаДолг,
+	Предоплата,
+	ПредоплатаРегл,
+	Долг,
+	ДолгРегл,
+	ВидВзаиморасчетов,
+	ПредоплатаРасчет,
+	ДолгРасчет,
+	КОплатеРасчет,
+	ДоговорВал,
+	ДоговорУЕ}
+ИЗ
+	ОбщийПоВзаиморасчетам КАК ОбщийПоВзаиморасчетам
+ГДЕ
+	НЕ ВЫБОР
+				КОГДА ОбщийПоВзаиморасчетам.Валюта = &amp;РеглВалюта
+					ТОГДА ВЫБОР
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма &gt; 0
+								ТОГДА ОбщийПоВзаиморасчетам.РегСуммаПредоплата = ОбщийПоВзаиморасчетам.ПредоплатаРегл
+										И ОбщийПоВзаиморасчетам.РегСуммаПредоплата = ОбщийПоВзаиморасчетам.ПредоплатаРасчет
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма &lt; 0
+								ТОГДА ОбщийПоВзаиморасчетам.РегСуммаДолг = ОбщийПоВзаиморасчетам.ДолгРегл
+										И ОбщийПоВзаиморасчетам.РегСуммаДолг = ОбщийПоВзаиморасчетам.ДолгРасчет
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма = 0
+								ТОГДА ОбщийПоВзаиморасчетам.СуммаРеглПоСрокам = 0
+										И ОбщийПоВзаиморасчетам.СуммаРасчета = 0
+						КОНЕЦ
+				КОГДА ОбщийПоВзаиморасчетам.Валюта &lt;&gt; &amp;РеглВалюта
+					ТОГДА ВЫБОР
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма &gt; 0
+								ТОГДА ОбщийПоВзаиморасчетам.РегСуммаПредоплата - ОбщийПоВзаиморасчетам.ПредоплатаРегл МЕЖДУ -0.03 И 0.03
+										И ОбщийПоВзаиморасчетам.ВалютнаяСуммаПредоплата = ОбщийПоВзаиморасчетам.Предоплата
+										И ОбщийПоВзаиморасчетам.ВалютнаяСуммаПредоплата = ОбщийПоВзаиморасчетам.ПредоплатаРасчет
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма &lt; 0
+								ТОГДА ОбщийПоВзаиморасчетам.РегСуммаДолг - ОбщийПоВзаиморасчетам.ДолгРегл МЕЖДУ -0.03 И 0.03
+										И ОбщийПоВзаиморасчетам.ВалютнаяСуммаДолг = ОбщийПоВзаиморасчетам.Долг
+										И ОбщийПоВзаиморасчетам.ВалютнаяСуммаДолг = ОбщийПоВзаиморасчетам.ДолгРасчет
+							КОГДА ОбщийПоВзаиморасчетам.РегСумма = 0
+								ТОГДА ОбщийПоВзаиморасчетам.СуммаРеглПоСрокам МЕЖДУ -0.03 И 0.03
+										И ОбщийПоВзаиморасчетам.СуммаРасчета = 0
+						КОНЕЦ
+			КОНЕЦ</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+	</dataSet>
+	<totalField>
+		<dataPath>Долг</dataPath>
+		<expression>Сумма(Долг)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДолгРегл</dataPath>
+		<expression>Сумма(ДолгРегл)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Предоплата</dataPath>
+		<expression>Сумма(Предоплата)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПредоплатаРегл</dataPath>
+		<expression>Сумма(ПредоплатаРегл)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РегСумма</dataPath>
+		<expression>Сумма(РегСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РегСуммаДолг</dataPath>
+		<expression>Сумма(РегСуммаДолг)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РегСуммаПредоплата</dataPath>
+		<expression>Сумма(РегСуммаПредоплата)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВалютнаяСуммаДолг</dataPath>
+		<expression>Сумма(ВалютнаяСуммаДолг)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВалютнаяСуммаПредоплата</dataPath>
+		<expression>Сумма(ВалютнаяСуммаПредоплата)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДолгРасчет</dataPath>
+		<expression>Сумма(ДолгРасчет)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПредоплатаРасчет</dataPath>
+		<expression>Сумма(ПредоплатаРасчет)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КОплатеРасчет</dataPath>
+		<expression>Сумма(КОплатеРасчет)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>НачалоПериода(ДобавитьКДате(&amp;Период, "Месяц", 1), "Месяц")</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СубконтоВзаиморасчетов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Субконто взаиморасчетов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.Контрагенты</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.Договоры</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>РеглВалюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Регл валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+			<v8:Type>v8:Null</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетаВзаиморасчетовПоставщики</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счета взаиморасчетов поставщики</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СчетаВзаиморасчетовКлиенты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счета взаиморасчетов клиенты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СчетаВзаиморасчетыОбщие</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счета взаиморасчеты общие</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ПроверкаСоответствияСуммРегУчетаИРегистров</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Провера соответствия сумм рег.учета и регистров</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Договор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГФУДоговора</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоговорВал</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоговорУЕ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПорядокРасчетов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Валюта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регл.учет</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВалютнаяСуммаПредоплата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РегСуммаПредоплата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВалютнаяСуммаДолг</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РегСуммаДолг</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистр расчетов по срокам</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Предоплата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПредоплатаРегл</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Долг</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДолгРегл</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистр расчетов</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПредоплатаРасчет</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДолгРасчет</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КОплатеРасчет</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Договор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ДоговорыКонтрагентов.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Валюта</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Валюты.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидВзаиморасчетов</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string">Клиенты</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СубконтоВзаиморасчетов</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РеглВалюта</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СчетаВзаиморасчетыОбщие</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВидВзаиморасчетов</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Договор</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Валюта</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Валюта</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">ПараметрыДанных.РеглВалюта</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#005E00</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДоговорВал</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДоговорВал</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#005E00</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДоговорУЕ</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДоговорУЕ</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#005E00</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Арктика</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка соответствия сумм рег учета и регистров</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидВзаиморасчетов</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

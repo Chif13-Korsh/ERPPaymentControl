@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НесооответствиеВалютДокументаИРегистраСумм</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодПр3</dataPath>
+			<field>ПериодПр3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегистраторПр3</dataPath>
+			<field>РегистраторПр3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ движения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаДокументаПр3</dataPath>
+			<field>ВалютаДокументаПр3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаРегистраПр3</dataPath>
+			<field>ВалютаРегистраПр3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта регистра</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаВзаиморасчетовПр3</dataPath>
+			<field>ВалютаВзаиморасчетовПр3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта взаиморасчетов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаВзаиморасчетовДокументаПр3</dataPath>
+			<field>ВалютаВзаиморасчетовДокументаПр3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта взаиморасчетов документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СФПр3</dataPath>
+			<field>СФПр3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СФ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОрганизацияПр3</dataPath>
+			<field>ОрганизацияПр3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОшибкиПр3</dataPath>
+			<field>ОшибкиПр3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки регистра сумм документов</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d6p1:NegativeTextColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	РеализацияТоваровУслуг.Организация КАК ОрганизацияПр3,
+	СуммыДокументовВВалютахУчета.Период КАК ПериодПр3,
+	СуммыДокументовВВалютахУчета.Регистратор КАК РегистраторПр3,
+	СуммыДокументовВВалютахУчета.Валюта КАК ВалютаРегистраПр3,
+	РеализацияТоваровУслуг.Валюта КАК ВалютаДокументаПр3,
+	СуммыДокументовВВалютахУчета.ВалютаВзаиморасчетов КАК ВалютаВзаиморасчетовПр3,
+	РеализацияТоваровУслуг.ВалютаВзаиморасчетов КАК ВалютаВзаиморасчетовДокументаПр3,
+	СчетФактураВыданный.Ссылка КАК СФПр3,
+	ВЫБОР
+		КОГДА СуммыДокументовВВалютахУчета.Валюта &lt;&gt; РеализацияТоваровУслуг.Валюта
+			ТОГДА "Валюта регистра не равна валюте документа"
+		КОГДА СуммыДокументовВВалютахУчета.ВалютаВзаиморасчетов &lt;&gt; РеализацияТоваровУслуг.ВалютаВзаиморасчетов
+			ТОГДА "Валюта взаиморасчета регистра не равна валюте взаиморасчета документа"
+		КОГДА РеализацияТоваровУслуг.Валюта &lt;&gt; РеализацияТоваровУслуг.ВалютаВзаиморасчетов
+				И РеализацияТоваровУслуг.ВалютаВзаиморасчетов &lt;&gt; РеализацияТоваровУслуг.Договор.ВалютаВзаиморасчетов
+			ТОГДА "Валюта взаиморасчетов документа не равна валюте взаиморасчетов по договору"
+	КОНЕЦ КАК ОшибкиПр3
+{ВЫБРАТЬ
+	ОрганизацияПр3,
+	ПериодПр3,
+	РегистраторПр3,
+	ВалютаРегистраПр3,
+	ВалютаДокументаПр3,
+	ВалютаВзаиморасчетовПр3,
+	ВалютаВзаиморасчетовДокументаПр3,
+	СФПр3.*,
+	ОшибкиПр3}
+ИЗ
+	РегистрСведений.СуммыДокументовВВалютахУчета КАК СуммыДокументовВВалютахУчета
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.СчетФактураВыданный КАК СчетФактураВыданный
+			ПО РеализацияТоваровУслуг.Ссылка = СчетФактураВыданный.ДокументОснование
+		ПО СуммыДокументовВВалютахУчета.Регистратор = РеализацияТоваровУслуг.Ссылка
+ГДЕ
+	(СуммыДокументовВВалютахУчета.Валюта &lt;&gt; РеализацияТоваровУслуг.Валюта
+			ИЛИ СуммыДокументовВВалютахУчета.ВалютаВзаиморасчетов &lt;&gt; РеализацияТоваровУслуг.ВалютаВзаиморасчетов
+			ИЛИ (РеализацияТоваровУслуг.Валюта &lt;&gt; РеализацияТоваровУслуг.ВалютаВзаиморасчетов
+				И РеализацияТоваровУслуг.ВалютаВзаиморасчетов &lt;&gt; РеализацияТоваровУслуг.Договор.ВалютаВзаиморасчетов))
+	И СуммыДокументовВВалютахУчета.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И РеализацияТоваровУслуг.Организация = &amp;Организация
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ПриобретениеТоваровУслуг.Организация,
+	СуммыДокументовВВалютахУчета.Период,
+	СуммыДокументовВВалютахУчета.Регистратор,
+	СуммыДокументовВВалютахУчета.Валюта,
+	ПриобретениеТоваровУслуг.Валюта,
+	СуммыДокументовВВалютахУчета.ВалютаВзаиморасчетов,
+	ПриобретениеТоваровУслуг.ВалютаВзаиморасчетов,
+	СчетФактураПолученный.Ссылка,
+	ВЫБОР
+		КОГДА СуммыДокументовВВалютахУчета.Валюта &lt;&gt; ПриобретениеТоваровУслуг.Валюта
+			ТОГДА "Валюта регистра не равна валюте документа"
+		КОГДА СуммыДокументовВВалютахУчета.ВалютаВзаиморасчетов &lt;&gt; ПриобретениеТоваровУслуг.ВалютаВзаиморасчетов
+			ТОГДА "Валюта взаиморасчета регистра не равна валюте взаиморасчета документа"
+		КОГДА ПриобретениеТоваровУслуг.Валюта &lt;&gt; ПриобретениеТоваровУслуг.ВалютаВзаиморасчетов
+				И ПриобретениеТоваровУслуг.ВалютаВзаиморасчетов &lt;&gt; ПриобретениеТоваровУслуг.Договор.ВалютаВзаиморасчетов
+			ТОГДА "Валюта взаиморасчетов документа не равна валюте взаиморасчетов по договору"
+	КОНЕЦ
+ИЗ
+	РегистрСведений.СуммыДокументовВВалютахУчета КАК СуммыДокументовВВалютахУчета
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПриобретениеТоваровУслуг КАК ПриобретениеТоваровУслуг
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.СчетФактураПолученный.ДокументыОснования КАК СчетФактураПолученный
+			ПО ПриобретениеТоваровУслуг.Ссылка = СчетФактураПолученный.ДокументОснование
+		ПО СуммыДокументовВВалютахУчета.Регистратор = ПриобретениеТоваровУслуг.Ссылка
+ГДЕ
+	(СуммыДокументовВВалютахУчета.Валюта &lt;&gt; ПриобретениеТоваровУслуг.Валюта
+			ИЛИ СуммыДокументовВВалютахУчета.ВалютаВзаиморасчетов &lt;&gt; ПриобретениеТоваровУслуг.ВалютаВзаиморасчетов
+			ИЛИ (ПриобретениеТоваровУслуг.Валюта &lt;&gt; ПриобретениеТоваровУслуг.ВалютаВзаиморасчетов
+				И ПриобретениеТоваровУслуг.ВалютаВзаиморасчетов &lt;&gt; ПриобретениеТоваровУслуг.Договор.ВалютаВзаиморасчетов))
+	И СуммыДокументовВВалютахУчета.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ПриобретениеТоваровУслуг.Организация = &amp;Организация</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОшибкиВзаиморасчетовВРегистреРасчетов</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрагентПр4</dataPath>
+			<field>КонтрагентПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорядокРасчетовПр4</dataPath>
+			<field>ПорядокРасчетовПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок расчетов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаФинансовогоУчетаПр4</dataPath>
+			<field>ГруппаФинансовогоУчетаПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа финансового учета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорПр4</dataPath>
+			<field>ДоговорПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаПр4</dataPath>
+			<field>ВалютаПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектРасчетовПр4</dataPath>
+			<field>ОбъектРасчетовПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект расчетов</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаДоговораПр4</dataPath>
+			<field>ВалютаДоговораПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта договора</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОрганизацияПр4</dataPath>
+			<field>ОрганизацияПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОшибкаПр4</dataPath>
+			<field>ОшибкаПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибка регистра расчетов</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d6p1:NegativeTextColor</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегистраторПр4</dataPath>
+			<field>РегистраторПр4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы движений</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вид</dataPath>
+			<field>Вид</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	"Клиенты" КАК Вид,
+	РасчетыСКлиентамиОбороты.АналитикаУчетаПоПартнерам.Организация КАК ОрганизацияПр4,
+	РасчетыСКлиентамиОбороты.АналитикаУчетаПоПартнерам.Контрагент КАК КонтрагентПр4,
+	РасчетыСКлиентамиОбороты.АналитикаУчетаПоПартнерам.Договор КАК ДоговорПр4,
+	РасчетыСКлиентамиОбороты.ОбъектРасчетов КАК ОбъектРасчетовПр4,
+	РасчетыСКлиентамиОбороты.Валюта КАК ВалютаПр4,
+	Договоры.ВалютаВзаиморасчетов КАК ВалютаДоговораПр4,
+	Договоры.ГруппаФинансовогоУчета КАК ГруппаФинансовогоУчетаПр4,
+	Договоры.ПорядокРасчетов КАК ПорядокРасчетовПр4,
+	ВЫБОР
+		КОГДА РасчетыСКлиентамиОбороты.Валюта &lt;&gt; Договоры.ВалютаВзаиморасчетов
+			ТОГДА "Валюта договора не равна валюте регистра расчетов"
+		КОГДА Договоры.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+				И Договоры.ГруппаФинансовогоУчета = ЗНАЧЕНИЕ(Справочник.ГруппыФинансовогоУчетаРасчетов.ПустаяСсылка)
+			ТОГДА "Не заполнена Группа фин.учета в валютном договоре"
+		КОГДА Договоры.ПорядокРасчетов = ЗНАЧЕНИЕ(Перечисление.ПорядокРасчетов.ПоДоговорамКонтрагентов)
+				И РасчетыСКлиентамиОбороты.АналитикаУчетаПоПартнерам.Договор &lt;&gt; РасчетыСКлиентамиОбороты.ОбъектРасчетов.Объект
+			ТОГДА "При порядке расчета ""По договорам"" объект расчета не равен договору в Аналитике партнера"
+		КОГДА Контрагенты.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ФизЛицо)
+				И Договоры.ПорядокРасчетов &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПорядокРасчетов.ПоДоговорамКонтрагентов)
+			ТОГДА "Порядок расчета в договоре Физ.лица отличается от принятого порядка ""По договорам"" в организации"
+	КОНЕЦ КАК ОшибкаПр4,
+	РасчетыСКлиентамиОбороты.Регистратор КАК РегистраторПр4
+{ВЫБРАТЬ
+	Вид,
+	ОрганизацияПр4,
+	КонтрагентПр4.*,
+	ДоговорПр4.*,
+	ОбъектРасчетовПр4.*,
+	ВалютаПр4,
+	ВалютаДоговораПр4,
+	ГруппаФинансовогоУчетаПр4,
+	ПорядокРасчетовПр4,
+	ОшибкаПр4,
+	РегистраторПр4}
+ИЗ
+	РегистрНакопления.РасчетыСКлиентами.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, АналитикаУчетаПоПартнерам.Организация = &amp;Организация) КАК РасчетыСКлиентамиОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК Договоры
+		ПО (РасчетыСКлиентамиОбороты.АналитикаУчетаПоПартнерам.Договор = Договоры.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+		ПО (РасчетыСКлиентамиОбороты.АналитикаУчетаПоПартнерам.Контрагент = Контрагенты.Ссылка)
+ГДЕ
+	(РасчетыСКлиентамиОбороты.Валюта &lt;&gt; Договоры.ВалютаВзаиморасчетов
+			ИЛИ (Договоры.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+				И Договоры.ГруппаФинансовогоУчета = ЗНАЧЕНИЕ(Справочник.ГруппыФинансовогоУчетаРасчетов.ПустаяСсылка))
+			ИЛИ (Договоры.ПорядокРасчетов = ЗНАЧЕНИЕ(Перечисление.ПорядокРасчетов.ПоДоговорамКонтрагентов)
+				И РасчетыСКлиентамиОбороты.АналитикаУчетаПоПартнерам.Договор &lt;&gt; РасчетыСКлиентамиОбороты.ОбъектРасчетов.Объект
+				И РасчетыСКлиентамиОбороты.СуммаОборот + РасчетыСКлиентамиОбороты.КОплатеОборот + РасчетыСКлиентамиОбороты.ОплачиваетсяОборот &lt;&gt; 0)
+			ИЛИ (Контрагенты.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ФизЛицо)
+				И Договоры.ПорядокРасчетов &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПорядокРасчетов.ПоДоговорамКонтрагентов)))
+{ГДЕ
+	РасчетыСКлиентамиОбороты.АналитикаУчетаПоПартнерам.Контрагент.* КАК Контрагент,
+	РасчетыСКлиентамиОбороты.АналитикаУчетаПоПартнерам.Договор.* КАК Договор}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Поставщики",
+	РасчетыСПоставщикамиОбороты.АналитикаУчетаПоПартнерам.Организация,
+	РасчетыСПоставщикамиОбороты.АналитикаУчетаПоПартнерам.Контрагент,
+	РасчетыСПоставщикамиОбороты.АналитикаУчетаПоПартнерам.Договор,
+	РасчетыСПоставщикамиОбороты.ОбъектРасчетов,
+	РасчетыСПоставщикамиОбороты.Валюта,
+	Договоры.ВалютаВзаиморасчетов,
+	Договоры.ГруппаФинансовогоУчета,
+	Договоры.ПорядокРасчетов,
+	ВЫБОР
+		КОГДА РасчетыСПоставщикамиОбороты.Валюта &lt;&gt; Договоры.ВалютаВзаиморасчетов
+			ТОГДА "Валюта договора не равна валюте регистра расчетов"
+		КОГДА Договоры.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+				И Договоры.ГруппаФинансовогоУчета = ЗНАЧЕНИЕ(Справочник.ГруппыФинансовогоУчетаРасчетов.ПустаяСсылка)
+			ТОГДА "Не заполнена Группа фин.учета в валютном договоре"
+		КОГДА Договоры.ПорядокРасчетов = ЗНАЧЕНИЕ(Перечисление.ПорядокРасчетов.ПоДоговорамКонтрагентов)
+				И РасчетыСПоставщикамиОбороты.АналитикаУчетаПоПартнерам.Договор &lt;&gt; РасчетыСПоставщикамиОбороты.ОбъектРасчетов.Объект
+			ТОГДА "При порядке расчета ""По договорам"" объект расчета не равен договору в Аналитике партнера"
+		КОГДА Контрагенты.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ФизЛицо)
+				И Договоры.ПорядокРасчетов &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПорядокРасчетов.ПоДоговорамКонтрагентов)
+			ТОГДА "Порядок расчета в договоре Физ.лица отличается от принятого порядка ""По договорам"" в организации"
+	КОНЕЦ,
+	РасчетыСПоставщикамиОбороты.Регистратор
+ИЗ
+	РегистрНакопления.РасчетыСПоставщиками.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, АналитикаУчетаПоПартнерам.Организация = &amp;Организация) КАК РасчетыСПоставщикамиОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК Договоры
+		ПО РасчетыСПоставщикамиОбороты.АналитикаУчетаПоПартнерам.Договор = Договоры.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+		ПО РасчетыСПоставщикамиОбороты.АналитикаУчетаПоПартнерам.Контрагент = Контрагенты.Ссылка
+ГДЕ
+	(РасчетыСПоставщикамиОбороты.Валюта &lt;&gt; Договоры.ВалютаВзаиморасчетов
+			ИЛИ (Договоры.ВалютаВзаиморасчетов &lt;&gt; &amp;РеглВалюта
+				И Договоры.ГруппаФинансовогоУчета = ЗНАЧЕНИЕ(Справочник.ГруппыФинансовогоУчетаРасчетов.ПустаяСсылка))
+			ИЛИ (Договоры.ПорядокРасчетов = ЗНАЧЕНИЕ(Перечисление.ПорядокРасчетов.ПоДоговорамКонтрагентов)
+				И РасчетыСПоставщикамиОбороты.АналитикаУчетаПоПартнерам.Договор &lt;&gt; РасчетыСПоставщикамиОбороты.ОбъектРасчетов.Объект
+				И РасчетыСПоставщикамиОбороты.СуммаОборот + РасчетыСПоставщикамиОбороты.КОплатеОборот + РасчетыСПоставщикамиОбороты.ОплачиваетсяОборот &lt;&gt; 0)
+			ИЛИ (Контрагенты.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ФизЛицо)
+				И Договоры.ПорядокРасчетов &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПорядокРасчетов.ПоДоговорамКонтрагентов)))</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>РеглВалюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Регл валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+			<v8:Type>v8:Null</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ПроверкаКорректностиВзаиморасчетов</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Проверка корректности взаиморасчетов</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Договор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ДоговорыКонтрагентов.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка корректности взаиморасчетов</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ОрганизацияПр3</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОрганизацияПр3</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ошибки  взаиморасчетов  в регистре "Суммы докуметов в валютах учета"</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ПериодПр3</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПериодПр3</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>РегистраторПр3</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОшибкиПр3</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВалютаДокументаПр3</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВалютаВзаиморасчетовДокументаПр3</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВалютаРегистраПр3</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВалютаВзаиморасчетовПр3</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СФПр3</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>МакетОформления</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Заголовок</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки  взаиморасчетов  в регистре "Суммы докуметов в валютах учета"</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ОрганизацияПр4</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОрганизацияПр4</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ошибки взаиморасчетов в регистрах "Расчеты с клиентами/поставщиками"</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ОшибкаПр4</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Вид</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>КонтрагентПр4</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ДоговорПр4</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ОбъектРасчетовПр4</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ВалютаПр4</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ВалютаДоговораПр4</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ГруппаФинансовогоУчетаПр4</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ПорядокРасчетовПр4</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemField">
+									<dcsset:field>КонтрагентПр4</dcsset:field>
+									<dcsset:orderType>Asc</dcsset:orderType>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:OrderItemField">
+									<dcsset:field>ДоговорПр4</dcsset:field>
+									<dcsset:orderType>Asc</dcsset:orderType>
+								</dcsset:item>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КонтрагентПр4</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ДоговорПр4</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ОбъектРасчетовПр4</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ВалютаПр4</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ВалютаДоговораПр4</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ГруппаФинансовогоУчетаПр4</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ПорядокРасчетовПр4</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:outputParameters>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:use>false</dcscor:use>
+									<dcscor:parameter>МакетОформления</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:use>false</dcscor:use>
+									<dcscor:parameter>Заголовок</dcscor:parameter>
+									<dcscor:value xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ошибки взаиморасчетов в регистрах "Расчеты с клиентами/поставщиками"</v8:content>
+										</v8:item>
+									</dcscor:value>
+								</dcscor:item>
+							</dcsset:outputParameters>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>РегистраторПр4</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
